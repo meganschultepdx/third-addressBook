@@ -106,9 +106,6 @@ $(document).ready(function() {
     var inputtedWorkEmail = $("input#new-work-email").val();
     var inputtedHomeAddress = $("input#new-home-address").val();
     var inputtedSummerHomeAddress = $("input#new-summer-home-address").val();
-      if("#new-first-name" === "") {
-        ("#show-contact").hide();
-      }
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
     $("input#new-phone-number").val("");
@@ -120,5 +117,10 @@ $(document).ready(function() {
     var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber, inputtedPersonalEmail, inputtedWorkEmail, inputtedHomeAddress, inputtedSummerHomeAddress);
     addressBook.addContact(newContact);
     displayContactDetails(addressBook);
+    }
   })
 })
+
+
+if(".form-control" === "") {
+  $("#show-contact").hide();
